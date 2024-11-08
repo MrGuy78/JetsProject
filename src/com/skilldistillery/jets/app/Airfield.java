@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.skilldistillery.jets.entities.CargoJet;
+import com.skilldistillery.jets.entities.FighterJet;
 import com.skilldistillery.jets.entities.Jet;
+import com.skilldistillery.jets.entities.PassengerJet;
 
 public class Airfield {
 
@@ -29,27 +31,24 @@ public class Airfield {
 				int speed = Integer.parseInt(fields[2]);
 				int range = Integer.parseInt(fields[3]);
 				double price = Double.parseDouble(fields[4]);
-				
-				switch(jetType) {
-					case "cargo":
-						Jet newJet = new CargoJet(model, speed, range, price);
-						fleet.add(newJet);
-						//String model, int speedInMPH, int range, double price
-						//add to fleet
-						break;
-						
-					case "fighter":
-						
-					
-						break;
-						
-					case "passenger":
-					
-					
-						break;
+
+				Jet newJet = null;
+				switch (jetType) {
+				case "cargo":
+					newJet = new CargoJet(model, speed, range, price);
+					fleet.add(newJet);
+					break;
+
+				case "fighter":
+					newJet = new FighterJet(model, speed, range, price);
+					fleet.add(newJet);
+					break;
+
+				case "passenger":
+					newJet = new PassengerJet(model, speed, range, price);
+					fleet.add(newJet);
+					break;
 				}
-				//Jet newJet = new PassengerJet(mod,sp,rng,pr);
-				//fleet.add(newJet);
 			}
 		} catch (IOException e) {
 			System.err.println(e);
