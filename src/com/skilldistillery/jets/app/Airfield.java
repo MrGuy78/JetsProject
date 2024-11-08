@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.skilldistillery.jets.entities.CargoJet;
 import com.skilldistillery.jets.entities.Jet;
 
 public class Airfield {
@@ -31,8 +32,20 @@ public class Airfield {
 				
 				switch(jetType) {
 					case "cargo":
-						//construct a new CargoJet()
+						Jet newJet = new CargoJet(model, speed, range, price);
+						fleet.add(newJet);
+						//String model, int speedInMPH, int range, double price
 						//add to fleet
+						break;
+						
+					case "fighter":
+						
+					
+						break;
+						
+					case "passenger":
+					
+					
 						break;
 				}
 				//Jet newJet = new PassengerJet(mod,sp,rng,pr);
