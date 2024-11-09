@@ -58,7 +58,7 @@ public class JetsApplication {
 			airfield.flyAllJets();
 			break;
 		case "3":
-
+			
 			break;
 		case "4":
 

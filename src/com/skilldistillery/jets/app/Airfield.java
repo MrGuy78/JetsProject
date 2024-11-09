@@ -65,6 +65,16 @@ public class Airfield {
 			jet.fly();
 		}
 	}
+	public Jet getFastestJet() {
+		Jet fastestJet = fleet.get(0);
+		for (Jet jet : fleet) {
+			if(jet.getSpeedInMPH() > fastestJet.getSpeedInMPH()) {
+				fastestJet = jet;
+			}
+		}
+		return fastestJet;
+	}
+	
 	// TODO: public methods for handling jets
 
 	
