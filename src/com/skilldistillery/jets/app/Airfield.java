@@ -82,7 +82,6 @@ public class Airfield {
 			}
 		}
 		return longestRangeJet;
-		
 	}
 	
 	// TODO: public methods for handling jets
