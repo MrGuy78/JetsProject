@@ -3,6 +3,7 @@ package com.skilldistillery.jets.app;
 import java.util.Scanner;
 
 import com.skilldistillery.jets.entities.Jet;
+import com.skilldistillery.jets.entities.PassengerJet;
 
 public class JetsApplication {
 
@@ -37,15 +38,15 @@ public class JetsApplication {
 	}
 
 	private String getUserChoice() {
-		String choice = sc.next();
+		String choice = sc.nextLine();
 		return choice;
 	}
 
 	private void displayUserMenu() {
-		System.out.println("   		************* AirField *************");
+		System.out.println("   	************* AirField *************");
 		System.out.println("1. List fleet								");
-		System.out.println("2. Fly all jets				6. DOGFIGHT! ");
-		System.out.println("3. View fastest jet			7. Add a jet to the fleet ");
+		System.out.println("2. Fly all jets			6. DOGFIGHT! ");
+		System.out.println("3. View fastest jet		7. Add a jet to the fleet ");
 		System.out.println("4. View longest range jet	8. Remove a jet from the fleet ");
 		System.out.println("5. Load all Cargo Jets 		9. Quit.");
 
@@ -74,8 +75,16 @@ public class JetsApplication {
 			airfield.callCombatReady();
 			break;
 		case "7":
-			
-			//add a jet to fleet
+			System.out.println("What model is your jet? (Airbus 380)");
+			String model = sc.nextLine();
+			System.out.println("What is the max speed? (500)");
+			int speed = sc.nextInt();
+			System.out.println("What is the range? (6000)");
+			int range = sc.nextInt();
+			System.out.println("How much does this jet cost? (23000000)");
+			double price = sc.nextDouble();
+			Jet newPassengerJet = new PassengerJet(model, speed, range, price);
+			airfield.addJet(newPassengerJet);
 			break;
 		case "8":
 			

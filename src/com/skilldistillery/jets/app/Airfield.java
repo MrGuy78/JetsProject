@@ -99,7 +99,9 @@ public class Airfield {
 			}
 		}
 	}
-	// TODO: public methods for handling jets
+	public void addJet(Jet newJet) {
+		fleet.add(newJet);
+	}
 
 	
 	
