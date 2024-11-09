@@ -58,25 +58,30 @@ public class JetsApplication {
 			airfield.flyAllJets();
 			break;
 		case "3":
-			
+			airfield.getFastestJet();
 			break;
 		case "4":
-
+			airfield.getLongestRangeJet();
 			break;
 		case "5":
-
+			
+			//load all cargo jets
 			break;
 		case "6":
-
+			
+			//DOGFIGHT!
 			break;
 		case "7":
-
+			
+			//add a jet to fleet
 			break;
 		case "8":
-
+			
+			//remove a jet from fleet
 			break;
 		case "9":
-
+			
+			//quit
 			break;
 		default:
 

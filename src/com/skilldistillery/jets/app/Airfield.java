@@ -74,6 +74,16 @@ public class Airfield {
 		}
 		return fastestJet;
 	}
+	public Jet getLongestRangeJet() {
+		Jet longestRangeJet = fleet.get(0);
+		for (Jet jet : fleet) {
+			if(jet.getRange() > longestRangeJet.getRange()) {
+				longestRangeJet = jet;
+			}
+		}
+		return longestRangeJet;
+		
+	}
 	
 	// TODO: public methods for handling jets
 
