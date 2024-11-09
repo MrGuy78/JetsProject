@@ -12,8 +12,8 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public void fight() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("What happens at eleven o'clock?");
+		System.out.println("Twelve! Eleven! Ten! Eleven o'clock, Dad! Fire!");
 	}
 	
 	

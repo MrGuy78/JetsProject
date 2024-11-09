@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.skilldistillery.jets.entities.CargoCarrier;
 import com.skilldistillery.jets.entities.CargoJet;
+import com.skilldistillery.jets.entities.CombatReady;
 import com.skilldistillery.jets.entities.FighterJet;
 import com.skilldistillery.jets.entities.Jet;
 import com.skilldistillery.jets.entities.PassengerJet;
@@ -88,6 +89,13 @@ public class Airfield {
 		for (Jet jet : fleet) {
 			if(jet instanceof CargoCarrier) {
 				((CargoCarrier) jet).loadCargo();
+			}
+		}
+	}
+	public void callCombatReady() {
+		for (Jet jet : fleet) {
+			if(jet instanceof CombatReady) {
+				((CombatReady) jet).fight();
 			}
 		}
 	}

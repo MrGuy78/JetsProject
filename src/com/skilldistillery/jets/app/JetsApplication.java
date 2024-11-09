@@ -71,8 +71,7 @@ public class JetsApplication {
 			airfield.loadAllCargoJets();
 			break;
 		case "6":
-			
-			//DOGFIGHT!
+			airfield.callCombatReady();
 			break;
 		case "7":
 			
