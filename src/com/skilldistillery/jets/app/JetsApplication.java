@@ -32,7 +32,6 @@ public class JetsApplication {
 			// act on user choice
 			processMenuChoice(userChoice);
 		}
-		// sysouts for menu
 	}
 
 	private String getUserChoice() {
@@ -56,7 +55,7 @@ public class JetsApplication {
 			airfield.listFleet();
 			break;
 		case "2":
-
+			airfield.flyAllJets();
 			break;
 		case "3":
 

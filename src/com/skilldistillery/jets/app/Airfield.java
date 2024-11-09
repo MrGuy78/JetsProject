@@ -60,6 +60,16 @@ public class Airfield {
 			System.out.println(jet);
 		}
 	}
+	public void flyAllJets() {
+		for (Jet jet : fleet) {
+			jet.fly();
+		}
+	}
 	// TODO: public methods for handling jets
 
+	
+	
+	
+	
+	
 }

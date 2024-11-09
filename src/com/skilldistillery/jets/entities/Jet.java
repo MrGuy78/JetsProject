@@ -2,8 +2,8 @@ package com.skilldistillery.jets.entities;
 
 public abstract class Jet {
 	private String model;
-	private int speedInMPH;
-	private int range;
+	private double speedInMPH;
+	private double range;
 	private double price;
 
 	public Jet() {}
@@ -17,8 +17,8 @@ public abstract class Jet {
 	}
 	
 	public void fly() {
-		//override in subclass
-		System.out.println(this.model + " flying."); //finish
+		double flyTime = range / speedInMPH;
+		System.out.println(this.model + " is flying high! But only for " + flyTime + " hours.");
 	}
 	
 	public double getSpeedInMach() {
@@ -33,7 +33,7 @@ public abstract class Jet {
 		this.model = model;
 	}
 
-	public int getSpeedInMPH() {
+	public double getSpeedInMPH() {
 		return speedInMPH;
 	}
 
@@ -41,7 +41,7 @@ public abstract class Jet {
 		this.speedInMPH = speedInMPH;
 	}
 
-	public int getRange() {
+	public double getRange() {
 		return range;
 	}
 
