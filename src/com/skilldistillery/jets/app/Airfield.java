@@ -103,6 +103,10 @@ public class Airfield {
 		fleet.add(newJet);
 	}
 
+	public void removeJet(Jet oldJet) {
+		fleet.remove(0);
+	}
+
 	
 	
 	

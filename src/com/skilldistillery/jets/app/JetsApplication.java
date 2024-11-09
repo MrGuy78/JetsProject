@@ -79,7 +79,7 @@ public class JetsApplication {
 			String model = sc.nextLine();
 			System.out.println("What is the max speed? (500)");
 			int speed = sc.nextInt();
-			System.out.println("What is the range? (6000)");
+			System.out.println("What is the max range? (6000)");
 			int range = sc.nextInt();
 			System.out.println("How much does this jet cost? (23000000)");
 			double price = sc.nextDouble();
@@ -87,14 +87,17 @@ public class JetsApplication {
 			airfield.addJet(newPassengerJet);
 			break;
 		case "8":
+			System.out.println("Which jet would you like to remove?");
+			sc.nextInt();
 			
 			//remove a jet from fleet
 			break;
 		case "9":
+			System.out.println("Thanks for visiting the Airfield! Safe travels!");
 			
-			//quit
 			break;
 		default:
+			System.out.println("That is not a valid entry. Please try again.");
 
 		}
 	}
