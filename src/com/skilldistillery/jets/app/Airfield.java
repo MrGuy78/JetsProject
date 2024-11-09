@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.skilldistillery.jets.entities.CargoCarrier;
 import com.skilldistillery.jets.entities.CargoJet;
 import com.skilldistillery.jets.entities.FighterJet;
 import com.skilldistillery.jets.entities.Jet;
@@ -83,7 +84,13 @@ public class Airfield {
 		}
 		return longestRangeJet;
 	}
-	
+	public void loadAllCargoJets() {
+		for (Jet jet : fleet) {
+			if(jet instanceof CargoCarrier) {
+				((CargoCarrier) jet).loadCargo();
+			}
+		}
+	}
 	// TODO: public methods for handling jets
 
 	

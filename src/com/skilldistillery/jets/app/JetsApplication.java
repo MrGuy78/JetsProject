@@ -2,6 +2,8 @@ package com.skilldistillery.jets.app;
 
 import java.util.Scanner;
 
+import com.skilldistillery.jets.entities.Jet;
+
 public class JetsApplication {
 
 	private Airfield airfield = new Airfield();
@@ -45,7 +47,7 @@ public class JetsApplication {
 		System.out.println("2. Fly all jets				6. DOGFIGHT! ");
 		System.out.println("3. View fastest jet			7. Add a jet to the fleet ");
 		System.out.println("4. View longest range jet	8. Remove a jet from the fleet ");
-		System.out.println("5. Load all Cargo Jets \"	9. Quit.");
+		System.out.println("5. Load all Cargo Jets 		9. Quit.");
 
 	}
 
@@ -58,14 +60,15 @@ public class JetsApplication {
 			airfield.flyAllJets();
 			break;
 		case "3":
-			airfield.getFastestJet();
+			Jet fastestJet = airfield.getFastestJet();
+			System.out.println(fastestJet);
 			break;
 		case "4":
-			airfield.getLongestRangeJet();
+			Jet longestRangeJet = airfield.getLongestRangeJet();
+			System.out.println(longestRangeJet);
 			break;
 		case "5":
-			
-			//load all cargo jets
+			airfield.loadAllCargoJets();
 			break;
 		case "6":
 			
