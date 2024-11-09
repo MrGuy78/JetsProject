@@ -10,20 +10,15 @@ public class JetsApplication {
 	private Airfield airfield = new Airfield();
 	private static Scanner sc;
 
-	// NO other fields; NO list of jets
-
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		JetsApplication app = new JetsApplication();
 		app.launch();
 
 		sc.close();
-
 	}
 
 	private void launch() {
-		// loop
-		// displayUserMenu
 		while (true) {
 
 			displayUserMenu();
@@ -33,7 +28,6 @@ public class JetsApplication {
 				System.out.println("Thanks for visiting the Airfield! Safe travels!");
 				break;
 			}
-			// act on user choice
 			processMenuChoice(userChoice);
 		}
 	}
@@ -92,7 +86,7 @@ public class JetsApplication {
 			System.out.println("Which jet would you like to remove?");
 			int whichJet = sc.nextInt();
 			airfield.removeJet(whichJet);
-			//remove a jet from fleet
+			// remove a jet from fleet
 			break;
 		default:
 			System.out.println("That is not a valid entry. Please try again.");

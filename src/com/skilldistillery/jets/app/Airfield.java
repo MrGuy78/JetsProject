@@ -29,7 +29,7 @@ public class Airfield {
 			while ((line = bufIn.readLine()) != null) {
 				String[] fields = line.split(",");
 				String jetType = fields[0];
-				String model = fields[1];
+				String model = fields[1].substring(1, fields[1].length()-1);
 				int speed = Integer.parseInt(fields[2]);
 				int range = Integer.parseInt(fields[3]);
 				double price = Double.parseDouble(fields[4]);
@@ -107,10 +107,5 @@ public class Airfield {
 	public void removeJet(int index) {
 		fleet.remove(index);
 	}
-
-	
-	
-	
-	
 	
 }

@@ -18,11 +18,13 @@ public abstract class Jet {
 	
 	public void fly() {
 		double flyTime = range / speedInMPH;
-		System.out.println(this.model + " is flying high! But only for " + flyTime + " hours.");
+		double machSpeed = speedInMPH / 767.3;
+		System.out.println("This " + this.model + " is flying high! But only for " + flyTime + " hours.");
+		System.out.println("And it flies Mach " + machSpeed + ".");
 	}
 	
 	public double getSpeedInMach() {
-		return 0.0; //finish, MPH -> Mach
+		return 0.0;
 	}
 
 	public String getModel() {
