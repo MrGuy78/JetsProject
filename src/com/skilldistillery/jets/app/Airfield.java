@@ -54,9 +54,12 @@ public class Airfield {
 			System.err.println(e);
 		}
 
-		// change fileName - bufferedreader template
 	}
-
+	public void listFleet() {
+		for (Jet jet : fleet) {
+			System.out.println(jet);
+		}
+	}
 	// TODO: public methods for handling jets
 
 }
