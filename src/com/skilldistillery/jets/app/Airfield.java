@@ -58,8 +58,9 @@ public class Airfield {
 
 	}
 	public void listFleet() {
-		for (Jet jet : fleet) {
-			System.out.println(jet);
+		
+		for (int i = 0; i < fleet.size(); i++) {
+			System.out.println(i + ": " + fleet.get(i));
 		}
 	}
 	public void flyAllJets() {
@@ -103,8 +104,8 @@ public class Airfield {
 		fleet.add(newJet);
 	}
 
-	public void removeJet(Jet oldJet) {
-		fleet.remove(0);
+	public void removeJet(int index) {
+		fleet.remove(index);
 	}
 
 	

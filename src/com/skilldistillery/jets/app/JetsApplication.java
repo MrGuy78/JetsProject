@@ -30,6 +30,7 @@ public class JetsApplication {
 			// get choice from scanner
 			String userChoice = getUserChoice();
 			if (userChoice.equals("9")) {
+				System.out.println("Thanks for visiting the Airfield! Safe travels!");
 				break;
 			}
 			// act on user choice
@@ -87,18 +88,15 @@ public class JetsApplication {
 			airfield.addJet(newPassengerJet);
 			break;
 		case "8":
+			airfield.listFleet();
 			System.out.println("Which jet would you like to remove?");
-			sc.nextInt();
-			
+			int whichJet = sc.nextInt();
+			airfield.removeJet(whichJet);
 			//remove a jet from fleet
-			break;
-		case "9":
-			System.out.println("Thanks for visiting the Airfield! Safe travels!");
-			
 			break;
 		default:
 			System.out.println("That is not a valid entry. Please try again.");
-
+			break;
 		}
 	}
 }
