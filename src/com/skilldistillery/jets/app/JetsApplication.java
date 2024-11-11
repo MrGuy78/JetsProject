@@ -22,7 +22,6 @@ public class JetsApplication {
 		while (true) {
 
 			displayUserMenu();
-			// get choice from scanner
 			String userChoice = getUserChoice();
 			if (userChoice.equals("9")) {
 				System.out.println("Thanks for visiting the Airfield! Safe travels!");
@@ -86,7 +85,6 @@ public class JetsApplication {
 			System.out.println("Which jet would you like to remove?");
 			int whichJet = sc.nextInt();
 			airfield.removeJet(whichJet);
-			// remove a jet from fleet
 			break;
 		default:
 			System.out.println("That is not a valid entry. Please try again.");

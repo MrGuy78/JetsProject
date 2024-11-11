@@ -16,5 +16,4 @@ public class CargoJet extends Jet implements CargoCarrier {
 		
 	}
 	
-
 }

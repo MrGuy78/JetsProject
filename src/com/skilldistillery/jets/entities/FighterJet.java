@@ -16,6 +16,4 @@ public class FighterJet extends Jet implements CombatReady {
 		System.out.println("Twelve! Eleven! Ten! Eleven o'clock, Dad! Fire!");
 	}
 	
-	
-
 }

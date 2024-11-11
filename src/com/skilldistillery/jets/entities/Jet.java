@@ -64,7 +64,5 @@ public abstract class Jet {
 		return "Jet [model=" + model + ", speedInMPH=" + speedInMPH 
 				+ ", range=" + range + ", price=" + price + "]";
 	}
-	
-	
 
 }
