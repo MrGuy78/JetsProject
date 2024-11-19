@@ -16,7 +16,6 @@ import com.skilldistillery.jets.entities.PassengerJet;
 public class Airfield {
 
 	private List<Jet> fleet = new ArrayList<>();
-	// No other fields
 
 	public Airfield() {
 		loadJetsFromFile("jets.txt");
