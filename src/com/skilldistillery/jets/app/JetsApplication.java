@@ -84,7 +84,9 @@ public class JetsApplication {
 			airfield.listFleet();
 			System.out.println("Which jet would you like to remove?");
 			int whichJet = sc.nextInt();
-			airfield.removeJet(whichJet);
+			sc.nextLine();
+			Jet removedJet = airfield.removeJet(whichJet);
+			System.out.println("You removed " + removedJet + "\n");
 			break;
 		default:
 			System.out.println("That is not a valid entry. Please try again.");

@@ -6,8 +6,9 @@ public abstract class Jet {
 	private int range;
 	private double price;
 
-	public Jet() {}
-	
+	public Jet() {
+	}
+
 	public Jet(String model, int speedInMPH, int range, double price) {
 		super();
 		this.model = model;
@@ -15,14 +16,14 @@ public abstract class Jet {
 		this.range = range;
 		this.price = price;
 	}
-	
+
 	public void fly() {
 		double flyTime = range / speedInMPH;
 		double machSpeed = speedInMPH / 767.3;
 		System.out.println("This " + this.model + " is flying high! But only for " + flyTime + " hours.");
 		System.out.println("And it flies Mach " + machSpeed + ".");
 	}
-	
+
 	public double getSpeedInMach() {
 		return 0.0;
 	}
@@ -61,8 +62,19 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet [model=" + model + ", speedInMPH=" + speedInMPH 
-				+ ", range=" + range + ", price=" + price + "]";
+		String className = this.getClass().getSimpleName();
+		switch (className) {
+		case "CargoJet":
+			className = "Cargo Jet";
+			break;
+		case "FighterJet":
+			className = "Fighter Jet";
+			break;
+		case "PassengerJet":
+			className = "Passenger Jet";
+			break;
+		}
+		return className + " [model=" + model + ", speedInMPH=" + speedInMPH + ", range=" + range + ", price=" + price + "]";
 	}
 
 }
